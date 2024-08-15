@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    <div class="stats">
+        <span id="availableGST">1000</span> GST
+        <span id="availableGMT">500</span> GMT
+    </div>
+    <div id="rewardSection">
+        <div>Score: <span id="rewardScore">0</span></div>
+        <button onclick="claimReward(100)">Claim 100 Points Reward</button>
+        <button onclick="claimReward(500)">Claim 500 Points Reward</button>
+        <button onclick="claimReward(1000)">Claim 1000 Points Reward</button>
+    </div>
+    <div id="levelSection">
+        <div>Current Level: <span id="currentLevel">1</span></div>
+        <div>GST Required: <span id="gstRequired">10</span></div>
+        <div>GMT Required: <span id="gmtRequired">5</span></div>
+        <button onclick="performLevelUp()">Level Up</button>
+    </div>
+    <div id="shopSection">
+        <button onclick="buyItem('Sneaker Box')">Buy Sneaker Box</button>
+        <button onclick="buyItem('Gem')">Buy Gem</button>
+    </div>
+    <div class="challenge">
+        <button onclick="joinChallenge('5km Walk')">Join 5km Walk</button>
+        <button onclick="joinChallenge('10km Run')">Join 10km Run</button>
+        <button onclick="joinChallenge('Burn 500 Calories')">Burn 500 Calories</button>
+    </div>
+    <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+        <div class="progress-bar-text">0%</div>
+    </div>
+</body>
+</html>
